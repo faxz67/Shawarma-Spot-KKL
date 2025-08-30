@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Phone, MapPin, Clock } from 'lucide-react';
+import { Instagram, Phone, MapPin, Clock } from 'lucide-react';
 
 interface Location {
   id: string;
@@ -18,9 +18,14 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
   const currentYear = new Date().getFullYear();
 
   const handleWhatsAppOrder = () => {
-    const message = "Hi Shawarma Spot, I'd like to place an order.";
-    const whatsappUrl = `https://wa.me/${currentLocation.phone.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+    const message = "Hi Shawarma Spot KKL, I'd like to place an order.";
+    const whatsappUrl = `https://wa.me/918428495773?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+  };
+
+  const handleMapRedirect = () => {
+    const mapUrl = "https://google.com/maps?sca_esv=c47268d37cf876ba&output=search&q=shawarma+spot+karaikal&source=lnms&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIetxLMeWi1u_d0OMRvkClUbalBeyXa8ssyRd_VUj5FQB2q_8y2WrDL2IgCAXaSQ3_zYrjWvpf9-QlhQU4Z6-vjWetaZ6AHIcpt0_zYkg0AsL4o5STFjwnqC-OZyjWLeDcIawphLHroHHvL4CrJmSsNpO6ZesGLcqOoefoWEdKO05NxcvwnQ&entry=mc&ved=1t:200715&ictx=111";
+    window.open(mapUrl, '_blank');
   };
 
   return (
@@ -58,16 +63,26 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1 text-orange-500 flex-shrink-0" />
-                <span className="text-sm">{currentLocation.address}</span>
+                <button 
+                  onClick={handleMapRedirect}
+                  className="text-sm hover:text-orange-400 transition-colors text-left"
+                >
+                  {currentLocation.address}
+                </button>
               </div>
               <div className="flex items-center">
                 <Phone size={16} className="mr-2 text-orange-500" />
-                <span className="text-sm">{currentLocation.phone}</span>
+                <button
+                  onClick={() => window.open(`tel:8428495773`, '_self')}
+                  className="text-sm hover:text-orange-400 transition-colors"
+                >
+                  8428495773
+                </button>
               </div>
               <div className="flex items-start">
                 <Clock size={16} className="mr-2 mt-1 text-orange-500 flex-shrink-0" />
                 <div className="text-sm">
-                  <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
+                  <p>Mon - Sun: 5:00 PM - 10:00 PM</p>
                   <p className="text-orange-400">Open all week!</p>
                 </div>
               </div>
@@ -81,25 +96,26 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
             <button
               onClick={handleWhatsAppOrder}
               className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 mb-4"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               Order via WhatsApp
             </button>
 
+            <button
+              onClick={handleMapRedirect}
+              className="w-full bg-gray-800 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 mb-4"
+            >
+              Get Directions
+            </button>
+
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.instagram.com/karaikal_shawarma_spot/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gray-800 hover:bg-orange-600 p-3 rounded-lg transition-colors"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="bg-gray-800 hover:bg-orange-600 p-3 rounded-lg transition-colors"
-                aria-label="Follow us on Facebook"
-              >
-                <Facebook size={20} />
               </a>
             </div>
           </div>

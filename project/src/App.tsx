@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import MenuPage from './pages/MenuPage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
+import Home from './components/Home';
+import Menu from './components/Menu';
+import About from './components/About';
+import Contact from './components/Contact';
 import { locations, Location } from './data/locations';
 import { useScrollAnimation } from './hooks/useScrollAnimation';
 
@@ -36,10 +36,10 @@ function App() {
         
         <main>
           <Routes>
-            <Route path="/" element={<HomePage currentLocation={currentLocation} />} />
-            <Route path="/menu" element={<MenuPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage currentLocation={currentLocation} />} />
+            <Route path="/" element={<Home currentLocation={currentLocation} />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact currentLocation={currentLocation} />} />
           </Routes>
         </main>
         
