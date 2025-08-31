@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
   };
 
   return (
-    <footer className="bg-black text-white py-16 relative overflow-hidden">
+    <footer className="bg-black text-white py-8 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-transparent to-orange-600"></div>
@@ -41,10 +41,10 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div className="md:col-span-1 group">
-            <h3 className="text-3xl font-serif font-bold text-white mb-6 transition-all duration-500 group-hover:text-orange-400 group-hover:scale-105 transform">
+            <h3 className="text-2xl font-serif font-bold text-white mb-4 transition-all duration-500 group-hover:text-orange-400 group-hover:scale-105 transform">
               Shawarma Spot
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed max-w-md transition-all duration-500 group-hover:text-white group-hover:scale-105 transform">
@@ -55,8 +55,8 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
 
           {/* Restaurant Quick Links */}
           <div className="group">
-            <h4 className="text-lg font-semibold text-white mb-6 transition-all duration-500 group-hover:text-orange-400 group-hover:scale-105 transform">Restaurant</h4>
-            <ul className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4 transition-all duration-500 group-hover:text-orange-400 group-hover:scale-105 transform">Restaurant</h4>
+            <ul className="space-y-3">
               <li className="group/item">
                 <Link 
                   to="/" 
@@ -134,8 +134,8 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
 
           {/* Find Us / Contact Information */}
           <div className="group">
-            <h4 className="text-lg font-semibold text-white mb-6 transition-all duration-500 group-hover:text-orange-400 group-hover:scale-105 transform">Find Us</h4>
-            <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white mb-4 transition-all duration-500 group-hover:text-orange-400 group-hover:scale-105 transform">Find Us</h4>
+            <div className="space-y-3">
               <div className="flex items-start group/item p-2 rounded-lg transition-all duration-500 hover:bg-gray-900/50 hover:shadow-xl transform hover:scale-105">
                 <MapPin size={18} className="mr-3 mt-1 text-orange-500 flex-shrink-0 transition-all duration-500 group-hover/item:scale-125 group-hover/item:rotate-12 group-hover/item:text-orange-400" />
                 <span className="text-gray-300 text-sm group-hover/item:text-white transition-all duration-500">Karaikal, Puducherry, India</span>
@@ -162,7 +162,7 @@ const Footer: React.FC<FooterProps> = ({ currentLocation }) => {
         </div>
 
         {/* Separator Line */}
-        <div className="border-t border-gray-700 mb-8 relative">
+        <div className="border-t border-gray-700 mb-6 relative">
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent"></div>
         </div>
 
