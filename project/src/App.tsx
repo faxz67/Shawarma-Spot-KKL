@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Menu from './components/Menu';
 import About from './components/About';
 import Contact from './components/Contact';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsConditions from './components/TermsConditions';
 import { locations, Location } from './data/locations';
 import { useScrollAnimation } from './hooks/useScrollAnimation';
 
@@ -40,6 +42,8 @@ function App() {
             <Route path="/menu" element={<Menu />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact currentLocation={currentLocation} />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
           </Routes>
         </main>
         

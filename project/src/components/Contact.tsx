@@ -146,8 +146,9 @@ const Contact: React.FC<ContactProps> = ({ currentLocation }) => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Location</h4>
-                    <p className="text-gray-600">{currentLocation.address}</p>
-                    <p className="text-gray-600">Karaikal, Puducherry</p>
+                    <p className="text-gray-600">Shawarma Spot,
+                      Church Street, Karaikal- Puducherry - 609602</p>
+            
                   </div>
                 </div>
 
@@ -158,7 +159,7 @@ const Contact: React.FC<ContactProps> = ({ currentLocation }) => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Opening Hours</h4>
                     <p className="text-gray-600">Monday - Sunday</p>
-                    <p className="text-lg font-bold text-green-600">5:00 PM - 10:00 PM</p>
+                    <p className="text-lg font-bold text-green-600">4:00 PM - 10:00 PM</p>
                   </div>
                 </div>
 
@@ -174,7 +175,7 @@ const Contact: React.FC<ContactProps> = ({ currentLocation }) => {
                     >
                       8428495773
                     </button>
-                    <p className="text-gray-600">Call us for reservations</p>
+                    <p className="text-gray-600">Let's Connect  </p>
                   </div>
                 </div>
               </div>
